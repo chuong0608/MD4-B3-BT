@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:replace="/layout :: head"></head>
+<body>
+<h3>Add Customer</h3>
+<p>
+    <a th:href="@{/product}">
+        Back to customer list
+    </a>
+</p>
+<table th:each="product : ${product}">
+<tr><td th:text="${product.getName()}"></td></tr>
+</table>
+<footer th:replace="/layout :: footer"></footer>
+</body>
+</html>
